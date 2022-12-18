@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #eeeeff, #ffeeee);
+    }
+
+    .box-foto {
+      width: 250px;
+      height: 250px;
+      background-color: #ffffff;
+      border-radius: 30px;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: -100px;
+    }
+
+    .box-imgs {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    label {
+      font-size: 3rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #btn {
+      width: 200px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    #btn:hover {
+      background-color: rgb(230, 230, 230);
+    }
+
+    .player1 {
+      color: rgb(134, 196, 255);
+    }
+
+    .player2 {
+      color: rgb(255, 134, 134);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(42, 42, 42);
+      width: 300px;
+      text-align: center;
+    }
+
+    @media (max-width:1500px) {
+      .box-imgs {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      label {
+        font-size: 2rem;
+      }
+
+      .box-foto {
+        width: 150px;
+        height: 150px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      button {
+        width: 150px;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h1>Pedra, papel ou tesoura</h1>
+
+    <div class="box-imgs">
+      <label class="player1">Jogador 1</label><label id="player1">0</label>
+      <div class="box-foto">
+        <img src="img/branco.jpg" id="img1">
+      </div>
+      <label>X</label>
+      <div class="box-foto">
+        <img src="img/branco.jpg" id="img2">
+      </div>
+      </label><label id="player2">0</label><label class="player2">Jogador 2
+    </div>
+
+    <button id="btn">Jogar</button>
+
+  </div>
+
+</body>
+
+
+<script src="script.js"></script>
+
+</html>
